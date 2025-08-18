@@ -1,10 +1,15 @@
-## Agenda at a Glance (timeboxed)
+## 🗓️ Workshop Agenda (60 minutes)
 
-1. **Intro, goals, and architecture** — 5 min
-2. **Connect to LKE & sanity checks** — 5 min
-3. **Deploy app (Deployment + Service)** — 10 min
-4. **Ingress + external path: DNS → LB → Ingress → Service → Pod** — 10 min
-5. **Inside the pod: networking + DNS** — 8 min
-6. **Footprint: endpoints, logs, events, metrics (optional Grafana)** — 12 min
-7. **Graceful termination & service handoff** — 7 min
-8. **Wrap‑up & key takeaways** — 3 min
+1. **Introduction & Setup (5 min)**
+    - Goals, architecture diagram, namespaces
+2. **Deploy a Demo App (10 min)**
+    - Deployment + Service in your namespace
+3. **Trace the Request Path (10 min)**
+    - DNS → NodeBalancer → Ingress → Service → Pod
+4. **Inside the Pod (8 min)**
+    - Inspect networking + DNS from the container
+5. **Network Footprint (12 min)**
+    - Logs, endpoints, metrics, Grafana peek
+6. **Graceful Termination (7 min)**
+    - Watch a pod drain and handoff traffic
+7. **Wrap-up & Badge Instructions (3 min)**
