@@ -2,7 +2,7 @@
 
 Thanks for participating in the KubeSkills workshop at **KCD Colombia**!
 
-To receive your **verifiable badge (issued via Verix)**, please follow the steps below.
+To receive your **verifiable badge (issued via [Verix](https://verix.io))**, please follow the steps below.
 
 ## ✅ What You Need to Show
 
