@@ -41,7 +41,7 @@ Submit **one screenshot** (two if you want distinction):
 ## 📸 How to Submit
 
 - Take a screenshot of your terminal output.
-- Post your screenshot as a reply in the **Badge Submission thread** here in Circle.
+- Post your screenshot as a reply in the [Badge Submission thread](https://community.kubeskills.com/c/kcd-colombia-workshop-2025/) in the KubeSkills Community.
 - Include your **namespace name** (e.g., `workshop-bogota`).
 
 ## 🎖️ What You’ll Earn
