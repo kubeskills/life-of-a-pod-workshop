@@ -40,4 +40,5 @@ export LB_IP=$(kubectl -n ingress-nginx get svc ingress-nginx-controller -o json
 - Practical, baseline security hardening for demo workloads.
 
 ## Badge
-Follow docs/badge-submission.md for what to capture and where to submit in [KubeSkills Community](https://community.kubeskills.com).
+
+Follow [docs/badge-submission.md](docs/badge-submission.md) for what to capture and where to submit in [KubeSkills Community](https://community.kubeskills.com).
