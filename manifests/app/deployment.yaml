@@ -3,13 +3,10 @@ kind: Deployment
 metadata:
   name: web
   namespace: ${NS}
-  labels:
-    app: web
 spec:
   replicas: 2
   selector:
-    matchLabels:
-      app: web
+    matchLabels: app: web
   template:
     metadata:
       labels:
@@ -32,5 +29,9 @@ spec:
               command: ["sh","-c","echo PRESTOP sleeping; sleep 10"]
         securityContext:
           runAsNonRoot: true
+          runAsUser: 1000
+          runAsGroup: 1000
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
+          capabilities:
+            drop: ["ALL"]
