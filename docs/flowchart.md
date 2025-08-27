@@ -13,7 +13,7 @@ flowchart LR
     SvcLB[Service ingress-nginx-controller<br/>Type=LoadBalancer<br/>Ports 80,443]
     Ctrl[Ingress NGINX controller pods]
     SvcMet[Service metrics :10254]
-    SvcAdm[Service admission :443 -> 8443]
+    SvcAdm[Service admission :443 -&gt; 8443]
     VWC[ValidatingWebhookConfiguration]
     SvcLB --> Ctrl
   end
@@ -21,8 +21,8 @@ flowchart LR
 
   %% App namespace
   subgraph "workshop-bogota"
-    Ingr[Ingress web host app.${LB_IP}.sslip.io]
-    SvcWeb[Service web 80 -> 8080]
+    Ingr[Ingress web host app.$&#123;LB_IP&#125;.sslip.io]
+    SvcWeb[Service web 80 -&gt; 8080]
     ES[EndpointSlices web]
     Dep[Deployment web (replicas 2)]
     Pods[Pods]
