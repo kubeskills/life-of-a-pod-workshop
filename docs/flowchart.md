@@ -1,14 +1,16 @@
 ```mermaid
 flowchart LR
-  subgraph External
+  %% External-facing path
+  subgraph "External"
     U[User]
     DNS[sslip.io DNS]
     LB[(LKE NodeBalancer)]
     U --> DNS --> LB
   end
 
-  subgraph ingress-nginx
-    SvcLB[Service ingress-nginx-controller\nType=LoadBalancer\nPorts 80,443]
+  %% Ingress NGINX stack
+  subgraph "ingress-nginx"
+    SvcLB[Service ingress-nginx-controller<br/>Type=LoadBalancer<br/>Ports 80,443]
     Ctrl[Ingress NGINX controller pods]
     SvcMet[Service metrics :10254]
     SvcAdm[Service admission :443 -> 8443]
@@ -17,7 +19,8 @@ flowchart LR
   end
   LB --> SvcLB
 
-  subgraph workshop-bogota
+  %% App namespace
+  subgraph "workshop-bogota"
     Ingr[Ingress web host app.${LB_IP}.sslip.io]
     SvcWeb[Service web 80 -> 8080]
     ES[EndpointSlices web]
@@ -27,12 +30,15 @@ flowchart LR
   end
   Ctrl --> Ingr
 
-  subgraph monitoring
+  %% Monitoring stack
+  subgraph "monitoring"
     Prom[Prometheus]
     SM[ServiceMonitor ingress-nginx]
     Graf[Grafana]
     SM --> Prom --> Graf
   end
+
   SvcMet --> SM
+
 
 ```
